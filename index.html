@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اليوم الوطني السعودي 95 — عزنا بطبعنا</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g1:#0b6623;
+  --g2:#1e8f3e;
+  --g3:#3fb062;
+  --gold:#ffd166;
+  font-family: 'Cairo', system-ui, Arial;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;padding:0;direction:rtl;
+  background:linear-gradient(180deg,#f7faf6 0%, #e9f3ea 100%);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+.wrap{max-width:1200px;margin:28px auto;padding:20px}
+.hero{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  padding:28px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:24px;
+  align-items:center;
+  background:linear-gradient(180deg,rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+  box-shadow:0 20px 50px rgba(10,50,30,0.08);
+}
+.flag-bg{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0.12}
+.hero-content{position:relative;z-index:2;padding:12px;text-align:center}
+.slogan{font-size:36px;margin:0;font-weight:900;color:var(--g1);letter-spacing:2px;transform:translateY(20px);opacity:0;animation:enterUp .9s forwards .15s}
+.subtitle{margin-top:8px;color:#35613f;font-weight:700;animation:enterUp .9s forwards .3s}
+.lead{margin-top:14px;color:#2f5f42;line-height:1.6;opacity:0;animation:enterUp .9s forwards .45s}
+@keyframes enterUp{to{transform:none;opacity:1}}
+.sections{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.card{background:white;border-radius:12px;padding:18px;box-shadow:0 8px 26px rgba(0,0,0,0.04);min-height:140px}
+.card h4{margin:0 0 10px;color:var(--g1)}
+.muted{color:#577a62}
+footer{margin-top:22px;text-align:center;color:#567156}
+.actions{display:flex;justify-content:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+.icon-btn{
+  display:flex;align-items:center;gap:6px;
+  background:var(--g1);color:white;padding:12px 20px;border-radius:10px;
+  border:none;cursor:pointer;font-weight:700;text-decoration:none;
+  transition: background 0.3s, transform 0.2s;
+}
+.icon-btn:hover{background:var(--g2);transform:scale(1.05);}
+.dot{position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.6), transparent 40%);right:-40px;top:-40px;opacity:0.25}
+
+/* شعار المدرسة */
+.school-logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px; 
+  height: auto;
+  z-index: 3;
+}
+
+/* Responsive */
+@media(max-width:1000px){.sections{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .slogan{font-size:28px}
+  .subtitle{font-size:16px}
+  .icon-btn{width:100%;justify-content:center}
+  .school-logo{width:80px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero" role="banner">
+    <svg class="flag-bg" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#1e8f3e" /><stop offset="1" stop-color="#3fb062" /></linearGradient>
+      </defs>
+      <rect x="0" y="0" width="800" height="400" fill="url(#g)" />
+      <g transform="translate(0,20)" opacity="0.12">
+        <path d="M0 120 C120 70 240 170 360 120 C480 70 600 170 720 120 L800 120 L800 400 L0 400 Z" fill="#fff" />
+      </g>
+    </svg>
+
+    <!-- شعار المدرسة -->
+    <img src="school.logo.png" alt="شعار المدرسة" class="school-logo">
+
+    <div class="hero-content">
+      <h1 class="slogan">اليوم الوطني السعودي 95</h1>
+      <div class="subtitle">تصميم احتفالي مبتكر يجمع الإبداع والهوية الوطنية</div>
+
+      <!-- الأيقونتين / الأزرار -->
+      <div class="actions">
+        <a href="index2.html" class="icon-btn">👑 ملوك المملكة</a>
+        <a href="index3.html" class="icon-btn">💻 المبرمجين</a>
+      </div>
+      <div class="dot" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="sections">
+      <section class="card" aria-labelledby="about-title">
+        <h4 id="about-title">عن اليوم الوطني: </h4>
+        <p class="muted">يوم توحيد المملكة : مناسبة وطنية تحتفل بها الأسر والمجتمع بما تحقق من نهضة وتقدم</p>
+        <ul style="margin-top:12px;color:#3b6b4a">
+          <li>تاريخ: 23 سبتمبر</li>
+          <li>الهدف : تجديد الانتماء والاحتفال بالهوية</li>
+          <li>الشعار لهذا العام : عزنا بطبعنا</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="quotes-title">
+        <div style="margin-top:12px">
+          <div id="rotator" style="font-weight:800;font-size:18px;color:var(--g1)">هي لنا دار</div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>جميع الحقوق محفوظة لـ قسم التقنية الرقمية</p>
+    </footer>
+  </main>
+</div>
+
+<script>
+const quotes = ['عزنا بطبعنا','فخر واعتزاز','وحدة، نهضة، مستقبل'];
+let qIdx=0;
+const rot = document.getElementById('rotator');
+setInterval(()=>{
+  qIdx=(qIdx+1)%quotes.length;
+  rot.style.opacity=0;
+  setTimeout(()=>{rot.textContent=quotes[qIdx];rot.style.opacity=1},250);
+},3500);
+</script>
+</body>
+</html>
