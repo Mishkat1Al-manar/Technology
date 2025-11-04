@@ -1,152 +1,769 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>اليوم الوطني السعودي 95 — عزنا بطبعنا</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --g1:#0b6623;
-  --g2:#1e8f3e;
-  --g3:#3fb062;
-  --gold:#ffd166;
-  font-family: 'Cairo', system-ui, Arial;
-  color-scheme: light;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;padding:0;direction:rtl;
-  background:linear-gradient(180deg,#f7faf6 0%, #e9f3ea 100%);
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-}
-.wrap{max-width:1200px;margin:28px auto;padding:20px}
-.hero{
-  position:relative;
-  overflow:hidden;
-  border-radius:18px;
-  padding:28px;
-  display:grid;
-  grid-template-columns:1fr;
-  gap:24px;
-  align-items:center;
-  background:linear-gradient(180deg,rgba(255,255,255,0.9), rgba(255,255,255,0.85));
-  box-shadow:0 20px 50px rgba(10,50,30,0.08);
-}
-.flag-bg{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0.12}
-.hero-content{position:relative;z-index:2;padding:12px;text-align:center}
-.slogan{font-size:36px;margin:0;font-weight:900;color:var(--g1);letter-spacing:2px;transform:translateY(20px);opacity:0;animation:enterUp .9s forwards .15s}
-.subtitle{margin-top:8px;color:#35613f;font-weight:700;animation:enterUp .9s forwards .3s}
-.lead{margin-top:14px;color:#2f5f42;line-height:1.6;opacity:0;animation:enterUp .9s forwards .45s}
-@keyframes enterUp{to{transform:none;opacity:1}}
-.sections{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
-.card{background:white;border-radius:12px;padding:18px;box-shadow:0 8px 26px rgba(0,0,0,0.04);min-height:140px}
-.card h4{margin:0 0 10px;color:var(--g1)}
-.muted{color:#577a62}
-footer{margin-top:22px;text-align:center;color:#567156}
-.actions{display:flex;justify-content:center;gap:10px;margin-top:12px;flex-wrap:wrap}
-.icon-btn{
-  display:flex;align-items:center;gap:6px;
-  background:var(--g1);color:white;padding:12px 20px;border-radius:10px;
-  border:none;cursor:pointer;font-weight:700;text-decoration:none;
-  transition: background 0.3s, transform 0.2s;
-}
-.icon-btn:hover{background:var(--g2);transform:scale(1.05);}
-.dot{position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.6), transparent 40%);right:-40px;top:-40px;opacity:0.25}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اليوم الوطني السعودي 95 - عزنا بطبعنا</title>
+  <meta name="description" content="احتفالية اليوم الوطني السعودي 95 - عزنا بطبعنا. تصميم احتفالي مبتكر يجمع الإبداع والهوية الوطنية">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* شعار المدرسة */
-.school-logo {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 120px; 
-  height: auto;
-  z-index: 3;
-}
+    :root {
+      --bg-main: #f7fdf9;
+      --bg-secondary: #e8f5ee;
+      --green-dark: hsl(140, 75%, 18%);
+      --green-medium: hsl(140, 70%, 25%);
+      --green-light: hsl(140, 60%, 35%);
+      --gold: hsl(45, 100%, 65%);
+      --gold-light: hsl(45, 100%, 75%);
+      --white: #ffffff;
+      --text-dark: hsl(140, 80%, 12%);
+      --text-muted: hsl(140, 20%, 45%);
+      
+      --shadow-luxury: 0 20px 60px -15px rgba(11, 102, 35, 0.15);
+      --shadow-elegant: 0 10px 40px -10px rgba(11, 102, 35, 0.2);
+      --shadow-gold: 0 8px 32px -8px rgba(255, 209, 102, 0.3);
+    }
 
-/* Responsive */
-@media(max-width:1000px){.sections{grid-template-columns:1fr}}
-@media(max-width:600px){
-  .slogan{font-size:28px}
-  .subtitle{font-size:16px}
-  .icon-btn{width:100%;justify-content:center}
-  .school-logo{width:80px}
-}
-</style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-secondary) 100%);
+      color: var(--text-dark);
+      direction: rtl;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, var(--green-medium) 0%, var(--green-light) 100%);
+      box-shadow: var(--shadow-luxury);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .hero-number {
+      font-size: clamp(3rem, 8vw, 6rem);
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+      font-weight: 900;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      margin: 1rem 0;
+    }
+
+    .hero-badge h2 {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      color: var(--white);
+      font-weight: 900;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      color: rgba(255, 255, 255, 0.9);
+      margin: 1.5rem 0;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      min-width: 200px;
+      justify-content: center;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--text-dark);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px -8px rgba(255, 209, 102, 0.4);
+    }
+
+    .btn-luxury {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: var(--white);
+    }
+
+    .btn-luxury:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .btn-back {
+      background: transparent;
+      color: var(--green-medium);
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-back:hover {
+      background: rgba(11, 102, 35, 0.05);
+      transform: translateX(4px);
+    }
+
+    /* Info Section */
+    .info-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: var(--shadow-elegant);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(11, 102, 35, 0.1);
+      animation: fadeInUp 0.6s ease-out both;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-luxury);
+    }
+
+    .card h3 {
+      color: var(--green-medium);
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .card p, .card ul {
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .card ul li {
+      padding: 0.5rem 0;
+      color: var(--green-light);
+      font-weight: 600;
+    }
+
+    .card ul li::before {
+      content: "✓ ";
+      color: var(--gold);
+      font-weight: 900;
+      margin-left: 0.5rem;
+    }
+
+    /* Quotes Card */
+    .quotes-card {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .quote-text {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--green-medium);
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease;
+    }
+
+    .quote-dots {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--green-light);
+      opacity: 0.3;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      opacity: 1;
+      background: var(--gold);
+      transform: scale(1.3);
+    }
+
+    /* Kings & Developers Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .king-card, .dev-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: var(--shadow-elegant);
+      border: 1px solid rgba(11, 102, 35, 0.1);
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out both;
+    }
+
+    .king-card:hover, .dev-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-luxury);
+    }
+
+    .icon-badge {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--green-medium) 0%, var(--green-light) 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .king-card h3, .dev-card h3 {
+      color: var(--green-medium);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+    }
+
+    .king-title, .dev-role {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .king-period {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .king-desc, .dev-desc {
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .skill-tag {
+      background: var(--bg-secondary);
+      color: var(--green-medium);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* Achievement Section */
+    .achievement {
+      background: linear-gradient(135deg, var(--green-medium) 0%, var(--green-light) 100%);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: var(--white);
+      box-shadow: var(--shadow-luxury);
+      margin: 3rem 0;
+    }
+
+    .achievement-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .achievement h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    .achievement p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      margin-top: 3rem;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    /* Page Sections */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      margin: 3rem 0;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .page-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      background: rgba(11, 102, 35, 0.1);
+      border-radius: 24px;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-icon svg {
+      width: 48px;
+      height: 48px;
+      stroke: var(--green-medium);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .page-header h1 {
+      color: var(--green-medium);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+      animation: none;
+    }
+
+    .page-header p {
+      color: var(--text-muted);
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      .hero {
+        padding: 2rem 1.5rem;
+      }
+
+      .btn-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .info-section, .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .achievement h2 {
+        font-size: 1.75rem;
+      }
+
+      .achievement p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="hero" role="banner">
-    <svg class="flag-bg" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#1e8f3e" /><stop offset="1" stop-color="#3fb062" /></linearGradient>
-      </defs>
-      <rect x="0" y="0" width="800" height="400" fill="url(#g)" />
-      <g transform="translate(0,20)" opacity="0.12">
-        <path d="M0 120 C120 70 240 170 360 120 C480 70 600 170 720 120 L800 120 L800 400 L0 400 Z" fill="#fff" />
-      </g>
-    </svg>
+  <div class="container">
+    <!-- Home Page -->
+    <div id="home" class="page active">
+      <header class="hero">
+        <div class="hero-content">
+          <h1>
+            اليوم الوطني السعودي
+            <span class="hero-number">95</span>
+          </h1>
+          <div class="hero-badge">
+            <h2>عزنا بطبعنا</h2>
+          </div>
+          <p class="hero-subtitle">
+            تصميم احتفالي مبتكر يجمع الإبداع والهوية الوطنية
+          </p>
+          <div class="btn-group">
+            <button class="btn btn-gold" onclick="showPage('kings')">
+              <span>👑</span>
+              ملوك المملكة
+            </button>
+            <button class="btn btn-luxury" onclick="showPage('developers')">
+              <span>💻</span>
+              المبرمجين
+            </button>
+          </div>
+        </div>
+      </header>
 
-    <!-- شعار المدرسة -->
-    <img src="school.logo.png" alt="شعار المدرسة" class="school-logo">
+      <section class="info-section">
+        <div class="card">
+          <h3>عن اليوم الوطني</h3>
+          <p>يوم توحيد المملكة: مناسبة وطنية تحتفل بها الأسر والمجتمع بما تحقق من نهضة وتقدم</p>
+          <ul>
+            <li>التاريخ: 23 سبتمبر</li>
+            <li>الهدف: تجديد الانتماء والاحتفال بالهوية</li>
+            <li>الشعار لهذا العام: عزنا بطبعنا</li>
+          </ul>
+        </div>
 
-    <div class="hero-content">
-      <h1 class="slogan">اليوم الوطني السعودي 95</h1>
-      <div class="subtitle">تصميم احتفالي مبتكر يجمع الإبداع والهوية الوطنية</div>
-
-      <!-- الأيقونتين / الأزرار -->
-      <div class="actions">
-        <a href="index2.html" class="icon-btn">👑 ملوك المملكة</a>
-        <a href="index3.html" class="icon-btn">💻 المبرمجين</a>
-      </div>
-      <div class="dot" aria-hidden="true"></div>
-    </div>
-  </header>
-
-  <main>
-    <div class="sections">
-      <section class="card" aria-labelledby="about-title">
-        <h4 id="about-title">عن اليوم الوطني: </h4>
-        <p class="muted">يوم توحيد المملكة : مناسبة وطنية تحتفل بها الأسر والمجتمع بما تحقق من نهضة وتقدم</p>
-        <ul style="margin-top:12px;color:#3b6b4a">
-          <li>تاريخ: 23 سبتمبر</li>
-          <li>الهدف : تجديد الانتماء والاحتفال بالهوية</li>
-          <li>الشعار لهذا العام : عزنا بطبعنا</li>
-        </ul>
-      </section>
-
-      <section class="card" aria-labelledby="quotes-title">
-        <div style="margin-top:12px">
-                    <h4 id="quotes-title"> عبارات وطنية متغيرة : </h4>
-          <div id="rotator" style="font-weight:800;font-size:18px;color:var(--g1)">هي لنا دار</div>
+        <div class="card quotes-card">
+          <h3>عبارات وطنية متغيرة</h3>
+          <div class="quote-text" id="quoteText">هي لنا دار</div>
+          <div class="quote-dots" id="quoteDots"></div>
         </div>
       </section>
+
+      <footer>
+        <p><strong>جميع الحقوق محفوظة لـ قسم التقنية الرقمية</strong></p>
+        <p>إشراف: أ. محمود سعيد</p>
+      </footer>
     </div>
 
-    <footer>
-      <p>جميع الحقوق محفوظة لـ قسم التقنية الرقمية</p>
-      إشراف : أ. محمود سعيد
-    </footer>
-  </main>
-</div>
+    <!-- Kings Page -->
+    <div id="kings" class="page">
+      <button class="btn btn-back" onclick="showPage('home')">
+        ← العودة للرئيسية
+      </button>
 
-<script>
-const quotes = ['عزنا بطبعنا','فخر واعتزاز','وحدة، نهضة، مستقبل'];
-let qIdx=0;
-const rot = document.getElementById('rotator');
-setInterval(()=>{
-  qIdx=(qIdx+1)%quotes.length;
-  rot.style.opacity=0;
-  setTimeout(()=>{rot.textContent=quotes[qIdx];rot.style.opacity=1},250);
-},3500);
-</script>
+      <div class="page-header">
+        <div class="page-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+        </div>
+        <h1>👑 ملوك المملكة العربية السعودية</h1>
+        <p>قادة عظماء صنعوا تاريخ أمة</p>
+      </div>
+
+      <div class="grid" id="kingsGrid"></div>
+    </div>
+
+    <!-- Developers Page -->
+    <div id="developers" class="page">
+      <button class="btn btn-back" onclick="showPage('home')">
+        ← العودة للرئيسية
+      </button>
+
+      <div class="page-header">
+        <div class="page-icon">
+          <svg viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <h1>💻 فريق المبرمجين</h1>
+        <p>مبرمجين يصنعون المستقبل الرقمي للمملكة</p>
+      </div>
+
+      <div class="grid" id="developersGrid"></div>
+
+      <div class="achievement">
+        <div class="achievement-icon">✨</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Navigation
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+      });
+      document.getElementById(pageId).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      // Initialize page-specific content
+      if (pageId === 'kings') {
+        initKings();
+      } else if (pageId === 'developers') {
+        initDevelopers();
+      }
+    }
+
+    // Quotes Rotator
+    const quotes = [
+      'هي لنا دار',
+      'عزنا بطبعنا',
+      'فخر واعتزاز',
+      'وحدة، نهضة، مستقبل'
+    ];
+    let currentQuote = 0;
+    const quoteText = document.getElementById('quoteText');
+    const quoteDots = document.getElementById('quoteDots');
+
+    // Create dots
+    quotes.forEach((_, index) => {
+      const dot = document.createElement('span');
+      dot.className = 'dot' + (index === 0 ? ' active' : '');
+      dot.onclick = () => setQuote(index);
+      quoteDots.appendChild(dot);
+    });
+
+    function setQuote(index) {
+      currentQuote = index;
+      quoteText.style.opacity = '0';
+      setTimeout(() => {
+        quoteText.textContent = quotes[index];
+        quoteText.style.opacity = '1';
+        updateDots();
+      }, 250);
+    }
+
+    function updateDots() {
+      document.querySelectorAll('.dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentQuote);
+      });
+    }
+
+    // Auto-rotate quotes
+    setInterval(() => {
+      currentQuote = (currentQuote + 1) % quotes.length;
+      setQuote(currentQuote);
+    }, 4000);
+
+    // Kings Data
+    const kings = [
+      {
+        name: "الملك عبدالعزيز بن عبدالرحمن آل سعود",
+        title: "المؤسس",
+        period: "1932 - 1953",
+        description: "مؤسس المملكة العربية السعودية الحديثة"
+      },
+      {
+        name: "الملك سعود بن عبدالعزيز آل سعود",
+        title: "الملك الثاني",
+        period: "1953 - 1964",
+        description: "عهد التوسع العمراني والتعليمي"
+      },
+      {
+        name: "الملك فيصل بن عبدالعزيز آل سعود",
+        title: "الملك الثالث",
+        period: "1964 - 1975",
+        description: "عهد التنمية والإصلاح"
+      },
+      {
+        name: "الملك خالد بن عبدالعزيز آل سعود",
+        title: "الملك الرابع",
+        period: "1975 - 1982",
+        description: "عهد الاستقرار والازدهار"
+      },
+      {
+        name: "الملك فهد بن عبدالعزيز آل سعود",
+        title: "الملك الخامس",
+        period: "1982 - 2005",
+        description: "عهد التطور والحداثة"
+      },
+      {
+        name: "الملك عبدالله بن عبدالعزيز آل سعود",
+        title: "الملك السادس",
+        period: "2005 - 2015",
+        description: "عهد الانفتاح والتحديث"
+      },
+      {
+        name: "الملك سلمان بن عبدالعزيز آل سعود",
+        title: "خادم الحرمين الشريفين",
+        period: "2015 - الآن",
+        description: "عهد الرؤية والتحول الوطني 2030"
+      }
+    ];
+
+    function initKings() {
+      const grid = document.getElementById('kingsGrid');
+      if (grid.children.length > 0) return; // Already initialized
+      
+      kings.forEach((king, index) => {
+        const card = document.createElement('div');
+        card.className = 'king-card';
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.innerHTML = `
+          <div class="icon-badge">👑</div>
+          <h3>${king.name}</h3>
+          <div class="king-title">${king.title}</div>
+          <div class="king-period"><strong>الفترة:</strong> ${king.period}</div>
+          <p class="king-desc">${king.description}</p>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Developers Data
+    const developers = [
+      {
+        name: "فهد العتيبي ",
+        icon: "💻"
+      },
+      {
+        name: "محمد القحطاني",
+        icon: "📱"
+      },
+      {
+        name: "سيف الزهراني",
+        icon: "⚙️"
+      },
+    ];
+
+    function initDevelopers() {
+      const grid = document.getElementById('developersGrid');
+      if (grid.children.length > 0) return; // Already initialized
+      
+      developers.forEach((dev, index) => {
+        const card = document.createElement('div');
+        card.className = 'dev-card';
+        card.style.animationDelay = `${index * 0.1}s`;
+        
+        const skillsHTML = dev.skills.map(skill => 
+          `<span class="skill-tag">${skill}</span>`
+        ).join('');
+        
+        card.innerHTML = `
+          <div class="icon-badge">${dev.icon}</div>
+          <h3>${dev.name}</h3>
+          <div class="dev-role">${dev.role}</div>
+          <div class="skills">${skillsHTML}</div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Add stagger animation delays
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.15}s`;
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
